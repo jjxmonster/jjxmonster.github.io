@@ -31,26 +31,19 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <AppContext.Provider value={
-          {
-            isUserMovingForward: isUserMovingForward,
-            isUserCheckProject: isUserCheckProject,
-            handleMoveChange: handleMoveChange,
-            handleChangeIsProjectChecked: handleChangeIsProjectChecked,
-          }
-        }>
-          <Switch>
 
-            <Route path="/about" component={ () => <AboutPage changeUserMove={ handleMoveChange } /> } />
-            <Route path="/projects" component={ () => <ProjectsPage isUserCheckProject={ isUserCheckProject } changeUserMove={ handleMoveChange } /> } />
-            <Route path="/project/:name" component={ ProjectCheck } />
-            <Route path="/contact" component={ Contact } />
-            <Route path="/" component={ () => <Home isUserMovingForward={ isUserMovingForward } /> } />
+        <Switch>
 
-          </Switch>
-        </AppContext.Provider>
+          <Route path="/about" component={ () => <AboutPage changeUserMove={ handleMoveChange } /> } />
+          <Route path="/projects" component={ () => <ProjectsPage isUserCheckProject={ isUserCheckProject } changeUserMove={ handleMoveChange } /> } />
+          <Route path="/project/:name" component={ ProjectCheck } />
+          <Route path="/contact" component={ Contact } />
+          <Route path="/" component={ () => <Home isUserMovingForward={ isUserMovingForward } /> } />
+
+        </Switch>
+
       </div >
-    </Router>
+    </Router >
   );
 
 }
