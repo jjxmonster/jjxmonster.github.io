@@ -1,0 +1,150 @@
+.homePage {
+
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+}
+
+.header h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 7vh;
+}
+
+.header p {
+
+    font-size: 3vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(0, 151, 113);
+}
+
+
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+
+.menu {
+
+    position: absolute;
+    top: 1%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 45vh;
+    height: 45vh;
+}
+
+
+.box1,
+.box2 {
+    position: absolute;
+    width: 8vh;
+    height: 8vh;
+    background-color: rgb(165, 165, 165);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+}
+
+
+
+.icon {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin: auto;
+    color: rgb(165, 165, 165);
+    font-size: 6.5vh;
+    transition: .2s ease;
+    animation: show 1s forwards;
+    animation-delay: 1.5s;
+}
+
+.icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.icon1 {
+    top: 10%;
+    right: 0;
+    left: 0;
+}
+
+.icon2 {
+    top: 0;
+    bottom: 0;
+    left: 10%;
+}
+
+.icon3 {
+    top: 0;
+    bottom: 0;
+    right: 10%;
+}
+
+.icon4 {
+    bottom: 10%;
+    right: 0;
+    left: 0;
+}
+
+/* @keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+} */
+
+@media only screen and (max-width: 500px) {
+    .menu {
+        overflow: hidden;
+    }
+}
+
+.menuSpace {
+    color: rgb(13, 0, 83);
+    font-size: 2.3vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 8vh;
+    height: 8vh;
+    font-weight: bold;
+}
+
+.icon:hover .box1 {
+    background-color: #fff;
+}
+
+.white {
+    background-color: white;
+    transition: all .2s ease;
+}

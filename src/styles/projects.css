@@ -1,0 +1,348 @@
+.projectsPage {
+    /* padding: 5%; */
+    display: flex;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 1, 51);
+    flex-direction: column;
+}
+
+
+/* body {
+    overflow: hidden;
+}
+*/
+.projectsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex: 1;
+    /* padding-top: 3%;
+    padding-bottom: 3%; */
+    color: white;
+    font-size: 4vh;
+}
+
+.welcomeProjects {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    width: 85%;
+    height: 65%;
+}
+
+
+.welcomeProjects div {
+    color: white;
+    display: flex;
+    /* overflow: hidden; */
+    align-items: center;
+    flex: 1;
+}
+
+.welcomeProjects div h1,
+h2 {
+    padding-left: 5%;
+    font-size: 7vh;
+}
+
+.welcomeProjects h2 {
+    color: rgb(0, 151, 113);
+}
+
+.welcomeProjects span {
+    color: rgb(0, 151, 113);
+    font-size: 7vh;
+}
+
+.active {
+    visibility: hidden;
+}
+
+.welcomeProjects:before {
+    position: absolute;
+    border-top: 5px solid rgb(0, 151, 113);
+    border-bottom: 5px solid rgb(0, 151, 113);
+    width: 0%;
+    height: 100%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    animation: border 1s forwards;
+    animation-delay: .7s;
+}
+
+.rollWelcome::before {
+    animation: roll .3s forwards;
+}
+
+@keyframes roll {
+    0% {
+        width: 100%;
+    }
+
+
+    100% {
+        width: 0%;
+    }
+}
+
+
+@keyframes border {
+    0% {
+        width: 0%;
+    }
+
+
+    100% {
+        width: 100%;
+    }
+}
+
+.projectsHeader h1 {
+    padding-left: 5%;
+}
+
+.projectsContainer {
+    visibility: hidden;
+    flex-grow: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex: 2;
+    background-color: rgb(0, 1, 51);
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+}
+
+.projectBox {
+    opacity: 0;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s ease;
+    z-index: 0;
+    border-radius: 20px;
+
+}
+
+.projectBox::before {
+    transition: all .5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+
+
+}
+
+.projectBox:hover::before {
+    background: rgba(0, 0, 0, 0.678);
+}
+
+
+.projectBox img {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    transition: .4s ease;
+}
+
+
+
+
+.projectContent {
+
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.projectContent h3 {
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.projectBox:hover .projectContent h3 {
+    opacity: 1;
+    transform: translateY(40%)
+}
+
+
+
+.projectContent::before {
+
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    content: "";
+    border-top: 5px solid rgba(255, 255, 255, 0.5);
+    border-left: 5px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.projectContent::after {
+
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    content: "";
+    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+    border-right: 5px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: 0.4s ease;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.projectBox:hover .projectContent::before {
+    opacity: 1;
+    width: 98%;
+    height: 98%;
+}
+
+.projectBox:hover .projectContent::after {
+    opacity: 1;
+    width: 98%;
+    height: 98%;
+}
+
+.spanBck {
+    /* visibility: hidden; */
+    width: 10%;
+    display: flex;
+    height: 6%;
+    cursor: pointer;
+    position: absolute;
+    justify-content: center;
+    font-size: 4vh;
+    font-weight: 700;
+    bottom: 2%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    letter-spacing: 0.1em;
+    color: rgb(145, 145, 145);
+    z-index: +1;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.spanBck::before {
+    content: "";
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgb(7, 0, 109);
+    overflow: hidden;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.spanBck:hover::before {
+    height: 100%;
+}
+
+.spanBck:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE CHANGES */
+
+@media only screen and (max-height: 850px) {
+    .projectsContainer div {
+        height: 200px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 550px) {
+
+
+
+
+    .projectsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .projectsContainer {
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .projectsContainer div {
+        height: 200px;
+    }
+
+    .projectsHeader {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .welcomeProjects::before {
+        border: 0;
+    }
+
+}
+
+@media only screen and (max-width:730px) {
+    .projectsContainer {
+        margin-top: 20%;
+    }
+}
