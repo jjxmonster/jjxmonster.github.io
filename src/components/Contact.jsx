@@ -1,6 +1,11 @@
+import '../styles/contact.css'
+
 const Contact = () => {
     return (
-        <div>CONTACT</div>
+        <div className="contactPage">
+            <div className="contactHeader"></div>
+            <div className="contactWrapper"></div>
+        </div>
     );
 }
 

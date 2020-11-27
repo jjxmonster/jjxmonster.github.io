@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
+import { AppContext } from '../context/context.js';
 import DelayLink from 'react-delay-link';
 import { animationsOnMount, animationsOnUnMount } from '../gsap/aboutPageAnimations'
 
@@ -12,11 +13,12 @@ import '../styles/about.css'
 import image from '../styles/images/me.jpg'
 
 
-const AboutPage = ({ changeUserMove }) => {
+const AboutPage = () => {
 
+    const { handleMoveChange } = useContext(AppContext)
     useEffect(() => {
         animationsOnMount()
-        changeUserMove()
+        handleMoveChange()
     }, [])
 
     return (

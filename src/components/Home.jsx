@@ -1,18 +1,22 @@
+import { useEffect, useContext } from 'react';
+import DelayLink from 'react-delay-link';
+import { AppContext } from '../context/context.js';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faProjectDiagram, faUser, faEnvelope, faEllipsisH } from '@fortawesome/free-solid-svg-icons'
-import { useEffect } from 'react';
-import DelayLink from 'react-delay-link';
+
 
 import '../styles/home.css'
 import { animationsOnMount, animationsOnNextMount, animationsOnUnMount, hoverEffects } from '../gsap/homePageBoxesAnimations.js'
 
 
-const Home = ({ isUserMovingForward }) => {
+const Home = () => {
+    const { isUserMovingForward, handleSetDefaultisProjectChecked } = useContext(AppContext)
 
     useEffect(() => {
         { isUserMovingForward ? animationsOnNextMount() : animationsOnMount() }
         hoverEffects()
-
+        handleSetDefaultisProjectChecked()
     }, [])
 
     return (

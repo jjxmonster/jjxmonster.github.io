@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { projects } from '../objects/projects'
-import { AnimationsOnMount } from '../gsap/projectCheckAnimations'
+import { AnimationsOnMount, AnimationsOnUnMount } from '../gsap/projectCheckAnimations'
 import { AppContext } from '../context/context.js';
+import DelayLink from 'react-delay-link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -11,29 +12,33 @@ import Slider from './Slider'
 import '../styles/projectPage.css'
 
 
+const ProjectCheck = ({ match, history }) => {
 
-
-
-const ProjectCheck = ({ match }) => {
-
+    const { handleChangeIsProjectChecked } = useContext(AppContext)
     useEffect(() => {
         AnimationsOnMount()
-    })
+        handleChangeIsProjectChecked()
+
+    }, [])
+
+    const goBackFuncion = () => {
+        AnimationsOnUnMount()
+        setTimeout(() => {
+            history.goBack()
+        }, 1000);
+
+    }
 
     const filterProjects = projects.filter(item => item.linkName === match.params.name)
     const currentProject = filterProjects[0]
 
     return (
         <>
-            <AppContext.Consumer>
-                { ({ handleChangeIsProjectChecked }) => {
-                    handleChangeIsProjectChecked()
-                } }
-            </AppContext.Consumer>
 
             <div className="projectPage">
                 <div className="projectHeader">
                     <h1>{ currentProject.name }</h1>
+
                 </div>
                 <div className="projectWrapper">
                     <div className="aboutProject">
@@ -47,7 +52,8 @@ const ProjectCheck = ({ match }) => {
                     </div>
                 </div>
                 <div className="projectButtons">
-                    <span className="backToProjects"><FontAwesomeIcon icon={ faAngleLeft } id='projectsBackIcon' />PROJECTS</span>
+
+                    <span onClick={ goBackFuncion } className="backToProjects"><FontAwesomeIcon icon={ faAngleLeft } id='projectsBackIcon' />PROJECTS</span>
 
                 </div>
 

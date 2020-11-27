@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react'
+import { AppContext } from '../context/context.js';
 import DelayLink from 'react-delay-link';
-import { animationsOnMount, animationsOnUnMount, animationsToProject } from '../gsap/projectsPageAnimations'
+import { animationsOnMount, animationsOnUnMount, animationsToProject, animationsOnBackMount } from '../gsap/projectsPageAnimations'
 
 import BackButton from './BackButton'
 import { projects } from '../objects/projects'
 
 import '../styles/projects.css'
 
-const ProjectsPage = ({ changeUserMove, isUserCheckProject }) => {
 
+const ProjectsPage = () => {
 
+    const { handleMoveChange, isUserCheckProject } = useContext(AppContext)
     useEffect(() => {
-        animationsOnMount()
-        changeUserMove()
-        console.log(isUserCheckProject)
+        { isUserCheckProject ? animationsOnBackMount() : animationsOnMount() }
+        handleMoveChange()
+
     }, [])
 
     return (

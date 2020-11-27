@@ -5,6 +5,7 @@ export const defaultObject = {
     isUserCheckProject:false,
     handleMoveChange:()=>{},
     handleChangeIsProjectChecked: ()=>{},
+    handleSetDefaultisProjectChecked: ()=>{}
 }
 
 export const AppContext = createContext(defaultObject)

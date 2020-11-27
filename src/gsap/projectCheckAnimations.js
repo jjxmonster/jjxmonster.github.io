@@ -13,3 +13,18 @@ export const AnimationsOnMount = ()=>
         document.querySelector('body').style.overflow='visible'
     }, 2500);
 }
+
+export const AnimationsOnUnMount = ()=>
+{
+    const timeLine = gsap.timeline({ defaults: { ease: 'power3.ease' } })
+    document.querySelector('body').style.overflow='hidden'
+  
+    timeLine.to(".backToProjects", {y:50,opacity:0,duration:0.2,},'start')
+    timeLine.to(".projectHeader h1", { x:100,opacity:0,duration:0.2 }, "start")
+    timeLine.to(".aboutProject", {opacity:0,x:100,duration:0.2 }, "start")
+    timeLine.to(".sliderWrapper", {opacity:0,x:100,duration:0.2 }, "start")
+    timeLine.to(".projectPage", { width:'0%', duration:0.7,delay:0.5,padding:"0" }, "start")
+    
+ 
+
+}

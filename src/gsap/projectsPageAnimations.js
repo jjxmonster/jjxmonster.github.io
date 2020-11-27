@@ -99,3 +99,37 @@ export const animationsToProject = ()=>
     timeLine.to(".projectsPage",{width:0, delay:0.4,duration:1},"start")
    
 }
+
+export const animationsOnBackMount = ()=>
+{ 
+
+    const title = document.querySelector(".welcomeProjects h1")
+    const secondTitle = document.querySelector(".welcomeProjects h2")
+    const cursor = document.querySelector('.welcomeProjects span')
+    const timeLine = gsap.timeline({ defaults: { ease: 'power3.ease' } })
+
+    title.textContent="CHECK OUT MY"
+    secondTitle.textContent="PROJECTS"
+
+
+    timeLine.from(".projectsPage",{width:0, delay:0.4,duration:1},"start")
+    timeLine.from(".projectsHeader", {opacity:0,delay:1.1, duration:0.2},"start")
+    timeLine.from(".projectsHeader h1", {opacity:0,x:-100,delay:1.1, duration:0.2},"start")
+    timeLine.from(".projectsHeader h2", {opacity:0,x:-100,delay:1.1, duration:0.2},"start")
+    timeLine.from(".projectsContainer",{opacity:0,x:-100, duration:0.2,delay:1.2},"start")
+    timeLine.to(".projectsContainer",{visibility:"visible",delay:1.2},"start")
+    timeLine.to(".projectBox",{opacity:1,duration:0.1,delay:1.2},"start")
+    timeLine.from(".spanBck", {opacity:0,y:10,delay:1.5, duration:0.1,},"start")
+
+
+    setTimeout(() => {
+        cursor.textContent="|"
+        const cursorAnimation = () => {
+
+         cursor.classList.toggle('active');
+     }
+ 
+     setInterval(cursorAnimation, 400);
+ }, 3500);
+
+}
