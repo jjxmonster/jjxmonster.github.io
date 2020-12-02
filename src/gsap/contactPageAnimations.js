@@ -71,4 +71,5 @@ export const animationsOnUnMount = ()=>
     timeLine.to(".contactHeader", {y:-100,opacity:0, duration:0.5} ,"start")
     timeLine.to(".contactWrapper", {y:-100,opacity:0,delay:0.2, duration:0.5} ,"start")
     timeLine.to(".contactPage", { height:0,delay:0.7, duration:1} ,"start")
+     document.querySelector('body').style.overflow="visible"
 }
