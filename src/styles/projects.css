@@ -8,7 +8,6 @@
     flex-direction: column;
 }
 
-
 .projectsHeader {
     display: flex;
     justify-content: center;
@@ -48,10 +47,8 @@ h2 {
 .welcomeProjects span {
     color: rgb(0, 151, 113);
     font-size: 7vh;
-}
-
-.active {
-    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
 }
 
 .welcomeProjects:before {
@@ -327,6 +324,14 @@ h2 {
 
     .welcomeProjects::before {
         border: 0;
+    }
+
+    .welcomeProjects div h1 {
+        font-size: 6vh;
+    }
+
+    .welcomeProjects div h2 {
+        font-size: 6vh;
     }
 
 }

@@ -25,6 +25,4 @@ export const AnimationsOnUnMount = ()=>
     timeLine.to(".sliderWrapper", {opacity:0,x:100,duration:0.2 }, "start")
     timeLine.to(".projectPage", { width:'0%', duration:0.7,delay:0.5,padding:"0" }, "start")
     
- 
-
 }

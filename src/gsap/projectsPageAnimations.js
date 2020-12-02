@@ -4,7 +4,7 @@ import gsap from 'gsap'
 
 export const animationsOnMount = ()=>
 {
-
+   
  const app = document.querySelector('.app')  
  const title = document.querySelector(".welcomeProjects h1")
  const secondTitle = document.querySelector(".welcomeProjects h2")
@@ -21,7 +21,7 @@ projectBoxes.forEach((item )=>{
  timeLine.from(".projectsPage", { height:0, duration:1} ,"start")
  timeLine.from(".spanBck",{opacity:0, y:10, delay:3.5, duration:0.1},"start")
 
- app.style=" overflow: auto"
+ app.style=" overflow: hidden"
 
  let number = 0;
  let numberh2 = 0;
@@ -102,7 +102,7 @@ export const animationsToProject = ()=>
 
 export const animationsOnBackMount = ()=>
 { 
-
+    document.querySelector('body').style.overflow='visible'
     const title = document.querySelector(".welcomeProjects h1")
     const secondTitle = document.querySelector(".welcomeProjects h2")
     const cursor = document.querySelector('.welcomeProjects span')

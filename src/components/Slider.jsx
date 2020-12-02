@@ -1,7 +1,7 @@
 const Slider = ({ images }) => {
 
     const radioInputs = images.map((item, id) => <input key={ item } type="radio" name="slide" id={ `dot${id + 1}` } selected={ false } />)
-    const sliderImages = images.map(item => <img key={ item } src={ item } />)
+    const sliderImages = images.map(item => <img key={ item } alt={ item } src={ item } />)
     const labels = images.map((item, id) => <label key={ item } htmlFor={ `dot${id + 1}` } />)
 
     return (
