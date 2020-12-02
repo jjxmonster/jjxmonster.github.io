@@ -275,4 +275,8 @@ label:hover::before {
         width: 100%;
         font-size: 0.8rem;
     }
+
+    .backToProjects {
+        width: 25%;
+    }
 }

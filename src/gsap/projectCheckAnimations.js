@@ -11,7 +11,7 @@ export const AnimationsOnMount = ()=>
 
     setTimeout(() => {
         document.querySelector('body').style.overflow='visible'
-    }, 2500);
+    }, 500);
 }
 
 export const AnimationsOnUnMount = ()=>

@@ -4,7 +4,7 @@ export const animationsOnMount = ()=>
 {
  document.querySelector('body').style.overflow="hidden"
 
- const form = document.querySelector(".contactForm form")
+ const form = document.querySelector(".contactForm form").childNodes
  const title = document.querySelector(".welcomeContact h1")
  const secondTitle = document.querySelector(".welcomeContact h2")
  const cursor = document.querySelector(".welcomeContact span")
@@ -15,9 +15,10 @@ export const animationsOnMount = ()=>
  timeLine.from(".spanBck",{opacity:0, y:10, delay:4.5, duration:0.1},"start")
  timeLine.from(".contactText",{opacity:0, y:100, delay:3.8, duration:0.5},"start")
 
- form.childNodes.forEach((item, id)=>{
-    timeLine.from(item,{opacity:0, delay:`4.${id}`, duration:0.5},"start")
+ form.forEach((item, id)=>{
+    timeLine.from(item,{opacity:0,y:100, delay:`4.${id}`, duration:0.5},"start")
  })
+ 
 
  let number = 0;
  let numberh2 = 0;
@@ -59,4 +60,15 @@ export const animationsOnMount = ()=>
      setInterval(cursorAnimation, 400);
  }, 3500);
 
+}
+
+export const animationsOnUnMount = ()=>
+{   
+    console.log("out")
+    const timeLine = gsap.timeline({ defaults: { ease: 'power3.ease' } })
+
+    timeLine.to(".spanBck", {opacity:0, duration:0.2,ease: 'none',},"start")
+    timeLine.to(".contactHeader", {y:-100,opacity:0, duration:0.5} ,"start")
+    timeLine.to(".contactWrapper", {y:-100,opacity:0,delay:0.2, duration:0.5} ,"start")
+    timeLine.to(".contactPage", { height:0,delay:0.7, duration:1} ,"start")
 }

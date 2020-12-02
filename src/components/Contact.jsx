@@ -1,11 +1,13 @@
-import emailjs from 'emailjs-com';
 import { Component } from 'react';
+import DelayLink from 'react-delay-link';
+import emailjs from 'emailjs-com';
 import BackButton from './BackButton'
+import { AppContext } from '../context/context.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-import { animationsOnMount } from '../gsap/contactPageAnimations'
+import { animationsOnMount, animationsOnUnMount } from '../gsap/contactPageAnimations'
 import '../styles/contact.css'
 
 class Contact extends Component {
@@ -18,6 +20,7 @@ class Contact extends Component {
         messageError: null,
         showErrors: false
     }
+    static contextType = AppContext
 
     errorMessages = {
         name: "Name can't contain a number and is required.",
@@ -31,6 +34,7 @@ class Contact extends Component {
         })
     }
     componentDidMount () {
+        this.context.handleMoveChange()
         animationsOnMount()
     }
 
@@ -144,9 +148,9 @@ class Contact extends Component {
                         </form>
                     </div>
                 </div>
-                {/* <DelayLink delay={ 1500 } to="/" replace={ false }> */ }
-                <BackButton />
-                {/* </DelayLink> */ }
+                <DelayLink delay={ 1500 } to="/" replace={ false }>
+                    <BackButton onUnMountFunction={ animationsOnUnMount } />
+                </DelayLink>
             </div>
         );
     }
