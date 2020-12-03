@@ -80,3 +80,34 @@ export const animationsOnUnMount = () => {
     timeLine.to(".header", { y:-100,opacity:0,duration:0.3 }, "start")
    
 }
+
+export const showSocialIcons = ()=>{
+    const icons = document.querySelectorAll(".icon")
+    const timeLine = gsap.timeline({ defaults: { ease: 'power1.ease' } })
+
+    timeLine.to(".box1", { rotate:0, duration:0.5}, "start")
+    timeLine.to(".box2", {rotate:0 , duration: 0.5 }, "start")
+    timeLine.to(".menuSpace", {visibility:'hidden' , duration: 0.1 }, "start")
+    icons.forEach(item =>{
+        timeLine.to(item, { visibility:"hidden",opacity:0,duration:0.2 },"start")
+    })
+   
+        timeLine.to(".box2", {backgroundColor:"white", duration: 0.2,delay:0.5 }, "start")
+   
+}
+
+export const hideSocialIcons = ()=>{
+    const icons = document.querySelectorAll(".icon")
+    const timeLine = gsap.timeline({ defaults: { ease: 'power1.ease' } })
+
+    timeLine.to(".box1", { rotate:45, duration:0.5}, "start")
+    timeLine.to(".box2", {rotate:-45 , duration: 0.5 }, "start")
+    timeLine.to(".menuSpace", {visibility:'visible' , duration: 0.1 }, "start")
+    timeLine.to(".box2", {backgroundColor:"", duration: 0.2, }, "start")
+    icons.forEach(item =>{
+        timeLine.to(item, { visibility:"visible",opacity:1,duration:0.1 },"start")
+    })
+   
+        
+   
+}

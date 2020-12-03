@@ -49,6 +49,7 @@
 
 .box1,
 .box2 {
+    overflow: hidden;
     position: absolute;
     width: 8vh;
     height: 8vh;
@@ -104,18 +105,12 @@
     left: 0;
 }
 
-/* @keyframes show {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        visibility: visible;
-        opacity: 1;
-    }
-} */
 
 @media only screen and (max-width: 500px) {
+    footer {
+        font-size: 0.7em;
+    }
+
     .menu {
         overflow: hidden;
     }
@@ -147,4 +142,71 @@
 .white {
     background-color: white;
     transition: all .2s ease;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    color: rgb(128, 128, 128);
+}
+
+
+
+
+/* SOCIAL ICONS STYLES */
+.socialWrapper {
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.socialIcon {
+    cursor: pointer;
+    margin-left: 5%;
+    font-size: 7vh;
+    color: rgb(75, 75, 75);
+}
+
+.backSocialIcon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 5.5vh;
+    width: 10%;
+    align-self: flex-end;
+    color: rgb(0, 0, 0);
+}
+
+#socialBackIcon {
+    z-index: 1;
+    color: rgb(0, 3, 167);
+}
+
+.backSocialIcon::before {
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    content: "";
+    transition: .4s ease;
+    background-color: rgb(165, 165, 165);
+}
+
+.backSocialIcon:hover::before {
+    width: 100%;
 }

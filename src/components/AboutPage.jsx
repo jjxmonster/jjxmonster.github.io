@@ -4,7 +4,7 @@ import DelayLink from 'react-delay-link';
 import { animationsOnMount, animationsOnUnMount } from '../gsap/aboutPageAnimations'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faJsSquare, faCss3Alt, faPhp, faGithub, faDev } from '@fortawesome/free-brands-svg-icons'
+import { faReact, faJsSquare, faCss3Alt, faPhp, faGitAlt, faDev } from '@fortawesome/free-brands-svg-icons'
 
 import BackButton from './BackButton'
 
@@ -80,7 +80,7 @@ const AboutPage = () => {
                                     <p><FontAwesomeIcon className="skillsIcon" icon={ faPhp } /></p>
                                 </li>
                                 <li className="beforeGit before">
-                                    <p><FontAwesomeIcon className="skillsIcon" icon={ faGithub } /></p>
+                                    <p><FontAwesomeIcon className="skillsIcon" icon={ faGitAlt } /></p>
                                 </li>
                             </ul>
                         </div>

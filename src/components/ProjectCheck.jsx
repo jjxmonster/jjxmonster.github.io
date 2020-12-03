@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { projects } from '../objects/projects'
 import { AnimationsOnMount, AnimationsOnUnMount } from '../gsap/projectCheckAnimations'
 import { AppContext } from '../context/context.js';
-import DelayLink from 'react-delay-link';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
