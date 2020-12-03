@@ -170,7 +170,7 @@ footer {
     height: 100%;
 }
 
-.socialIcon {
+.socialWrapper a {
     cursor: pointer;
     margin-left: 5%;
     font-size: 7vh;

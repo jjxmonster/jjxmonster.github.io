@@ -32,9 +32,9 @@ const SocialIcons = (props) => {
     return (
         <>
             <div className="socialWrapper">
-                <FontAwesomeIcon className="socialIcon" icon={ faFacebook } />
-                <FontAwesomeIcon className="socialIcon" icon={ faGithub } />
-                <FontAwesomeIcon className="socialIcon" icon={ faInstagram } />
+                <a target="_blank" href="https://www.facebook.com/kuba.tarabasz/"><FontAwesomeIcon className="socialIcon" icon={ faFacebook } /></a>
+                <a target="_blank" href="https://github.com/jjxmonster"><FontAwesomeIcon className="socialIcon" icon={ faGithub } /></a>
+                <a target="_blank" href="https://www.instagram.com/jjxmonster/"><FontAwesomeIcon className="socialIcon" icon={ faInstagram } /></a>
                 <div className="backSocialIcon" onClick={ handleHideSocialIcons }>
                     <FontAwesomeIcon icon={ faAngleLeft } id='socialBackIcon' />
                 </div>
