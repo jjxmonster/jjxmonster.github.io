@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.760455f8.chunk.css",
-    "main.js": "/static/js/main.b0d94af6.chunk.js",
-    "main.js.map": "/static/js/main.b0d94af6.chunk.js.map",
+    "main.css": "/static/css/main.d9df51d4.chunk.css",
+    "main.js": "/static/js/main.19a5f250.chunk.js",
+    "main.js.map": "/static/js/main.19a5f250.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.291a5225.js",
     "runtime-main.js.map": "/static/js/runtime-main.291a5225.js.map",
     "static/js/2.cf4c9036.chunk.js": "/static/js/2.cf4c9036.chunk.js",
     "static/js/2.cf4c9036.chunk.js.map": "/static/js/2.cf4c9036.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.760455f8.chunk.css.map": "/static/css/main.760455f8.chunk.css.map",
+    "static/css/main.d9df51d4.chunk.css.map": "/static/css/main.d9df51d4.chunk.css.map",
     "static/js/2.cf4c9036.chunk.js.LICENSE.txt": "/static/js/2.cf4c9036.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/bgc.e74918bd.jpg",
     "static/media/me.05a8def5.jpg": "/static/media/me.05a8def5.jpg",
+    "static/media/note1.da2f5469.jpg": "/static/media/note1.da2f5469.jpg",
+    "static/media/note2.394fee4d.jpg": "/static/media/note2.394fee4d.jpg",
+    "static/media/note3.0c50f33d.jpg": "/static/media/note3.0c50f33d.jpg",
     "static/media/redfire.a6b3d53c.jpg": "/static/media/redfire.a6b3d53c.jpg",
     "static/media/redfire1.fbbced94.jpg": "/static/media/redfire1.fbbced94.jpg",
     "static/media/redfire2.39e3930d.jpg": "/static/media/redfire2.39e3930d.jpg",
-    "static/media/restaurant.4608f21e.jpg": "/static/media/restaurant.4608f21e.jpg",
-    "static/media/restaurant2.60fd81c5.jpg": "/static/media/restaurant2.60fd81c5.jpg",
-    "static/media/restaurant3.d16989ac.jpg": "/static/media/restaurant3.d16989ac.jpg",
     "static/media/todoapp.923d9352.jpg": "/static/media/todoapp.923d9352.jpg",
     "static/media/weatherapp.d97e18d2.jpg": "/static/media/weatherapp.d97e18d2.jpg",
     "static/media/weatherapp2.3d4fa34f.jpg": "/static/media/weatherapp2.3d4fa34f.jpg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.291a5225.js",
     "static/js/2.cf4c9036.chunk.js",
-    "static/css/main.760455f8.chunk.css",
-    "static/js/main.b0d94af6.chunk.js"
+    "static/css/main.d9df51d4.chunk.css",
+    "static/js/main.19a5f250.chunk.js"
   ]
 }
