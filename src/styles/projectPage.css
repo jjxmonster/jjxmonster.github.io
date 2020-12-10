@@ -62,6 +62,7 @@
 }
 
 .image img {
+    object-fit: cover;
     float: left;
     width: 25%;
     height: 100%;
