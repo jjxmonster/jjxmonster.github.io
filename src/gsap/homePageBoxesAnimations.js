@@ -83,7 +83,7 @@ export const animationsOnUnMount = () => {
 
 export const showSocialIcons = ()=>{
     const icons = document.querySelectorAll(".icon")
-    const timeLine = gsap.timeline({ defaults: { ease: 'power1.ease' } })
+    const timeLine = gsap.timeline({ defaults: { ease: 'none' } })
 
     timeLine.to(".box1", { rotate:0, duration:0.5}, "start")
     timeLine.to(".box2", {rotate:0 , duration: 0.5 }, "start")

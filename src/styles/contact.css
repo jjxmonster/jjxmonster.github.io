@@ -24,7 +24,6 @@
 }
 
 .contactForm {
-
     position: relative;
     flex: 1;
 }
@@ -107,7 +106,7 @@ input:focus::placeholder {
     height: 10%;
     position: absolute;
     bottom: 5%;
-    left: 5px;
+    right: 5px;
     margin: auto;
     transition: .3s ease;
     font-size: 1em;

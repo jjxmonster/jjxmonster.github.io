@@ -78,10 +78,11 @@ class Contact extends Component {
             emailjs.sendForm('service_ljad4dc', 'template_cez2xe7', e.target, 'user_c3tVKssssylv8IrSad9b0')
                 .then((result) => {
                     console.log(result.text);
-                    alert("Thank you, your message was sent.")
+                    alert("Thank you, your message was sent. I will write back as soon as possible.")
 
                 }, (error) => {
                     console.log(error.text);
+                    alert("Ooops! something went wrong! Try again later.")
                 });
 
             this.setState({
@@ -121,31 +122,50 @@ class Contact extends Component {
                     </div>
                 </div>
                 <div className="contactWrapper">
-                    <div className="contactText">
-                        <h3>If you have any questions or offer, you can send me a message via form, or contact me on email.</h3>
-                        <a href="mailTo:kuba.tarabasz@wp.pl"><span><FontAwesomeIcon icon={ faEnvelope } /></span> kuba.tarabasz@wp.pl</a>
-                    </div>
 
                     <div className="contactForm">
                         <form onSubmit={ this.sendEmail.bind(this) }>
                             <div className="formName">
-                                <input className="input" type="text" name="from_name" placeholder="Name" onChange={ this.handleChange.bind(this) } value={ from_name }></input>
+                                <input className="input"
+                                    type="text"
+                                    name="from_name"
+                                    placeholder="Name"
+                                    onChange={ this.handleChange.bind(this) }
+                                    value={ from_name }>
+                                </input>
                                 { showErrors ? <p>{ nameError ? this.errorMessages.name : null }</p> : null }
                             </div>
 
                             <div className="formMail">
-                                <input className="input" type="text" name="email" placeholder="Email" onChange={ this.handleChange.bind(this) } value={ email }></input>
+                                <input className="input"
+                                    type="text"
+                                    name="email"
+                                    placeholder="Email"
+                                    onChange={ this.handleChange.bind(this) }
+                                    value={ email }>
+                                </input>
+
                                 { showErrors ? <p>{ mailError ? this.errorMessages.mail : null }</p> : null }
                             </div>
 
                             <div className="formArea">
-                                <textarea name="message" placeholder="Message" onChange={ this.handleChange.bind(this) } value={ message } cols="30" rows="10"></textarea>
+                                <textarea name="message"
+                                    placeholder="Message"
+                                    onChange={ this.handleChange.bind(this) }
+                                    value={ message }
+                                    cols="30"
+                                    rows="10">
+                                </textarea>
                                 { showErrors ? <p>{ messageError ? this.errorMessages.message : null }</p> : null }
                             </div>
 
                             <input onClick={ this.handleShowErrors.bind(this) } className="formSubmit" type="submit" value="Submit" />
 
                         </form>
+                    </div>
+                    <div className="contactText">
+                        <h3>If you have any questions or offer, you can send me a message via form, or contact me on email.</h3>
+                        <a href="mailTo:kuba.tarabasz@wp.pl"><span><FontAwesomeIcon icon={ faEnvelope } /></span> kuba.tarabasz@wp.pl</a>
                     </div>
                 </div>
                 <DelayLink delay={ 1500 } to="/" replace={ false }>
