@@ -32,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <Router basename={ process.env.PUBLIC_URL >
       <div className="app">
         <AppContext.Provider value={
           {
@@ -53,7 +53,7 @@ const App = () => {
 
         </AppContext.Provider >
       </div >
-    </Router>
+    </Router >
   );
 
 }
