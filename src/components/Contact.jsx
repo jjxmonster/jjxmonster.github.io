@@ -34,6 +34,7 @@ class Contact extends Component {
         })
     }
     componentDidMount () {
+
         this.context.handleMoveChange()
         animationsOnMount()
     }
@@ -75,7 +76,7 @@ class Contact extends Component {
         const { nameError, mailError, messageError } = this.state
 
         if (nameError === false && mailError === false && messageError === false) {
-            emailjs.sendForm('service_ljad4dc', 'template_cez2xe7', e.target, 'user_c3tVKssssylv8IrSad9b0')
+            emailjs.sendForm('service_ljad4dc', 'template_cez2xe7', e.target, process.env.REACT_APP_UNSPLASH_KEY)
                 .then((result) => {
                     console.log(result.text);
                     alert("Thank you, your message was sent. I will write back as soon as possible.")
