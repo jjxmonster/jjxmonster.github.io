@@ -76,8 +76,8 @@ const AboutPage = () => {
                                     <p><FontAwesomeIcon className="skillsIcon" icon={ faDev } /></p>
                                 </li>
                                 <li className='beforeGsap before'><p>GSAP</p></li>
-                                <li className="beforePhp before">
-                                    <p><FontAwesomeIcon className="skillsIcon" icon={ faPhp } /></p>
+                                <li >
+                                    <p className='beforeApi before'>API</p>
                                 </li>
                                 <li className="beforeGit before">
                                     <p><FontAwesomeIcon className="skillsIcon" icon={ faGitAlt } /></p>
