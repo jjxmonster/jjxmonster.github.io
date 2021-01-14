@@ -63,7 +63,7 @@ const AboutPage = () => {
                                 <li className="beforeJs before">
                                     <p><FontAwesomeIcon className="skillsIcon" icon={ faJsSquare } /></p>
                                 </li>
-                                <li className='beforeRwd before'><p>RWD</p></li>
+                                <li><p>Redux</p></li>
                                 <li className="beforeCss before">
                                     <p><FontAwesomeIcon className="skillsIcon" icon={ faCss3Alt } /></p>
                                 </li>

@@ -5,11 +5,13 @@ import weatherApp4 from '../styles/images/weatherapp4.jpg'
 import redifire from '../styles/images/redfire.jpg'
 import redifire1 from '../styles/images/redfire1.jpg'
 import redifire2 from '../styles/images/redfire2.jpg'
+import budget1 from '../styles/images/budget1.jpg'
+import budget2 from '../styles/images/budget2.jpg'
+import budget3 from '../styles/images/budget3.jpg'
+import budget4 from '../styles/images/budget4.jpg'
 import note1 from '../styles/images/note1.jpg'
 import note2 from '../styles/images/note2.jpg'
 import note3 from '../styles/images/note3.jpg'
-import todoapp from '../styles/images/todoapp.jpg'
-
 
 export const projects = [
 {
@@ -36,16 +38,16 @@ export const projects = [
     linkName:"note",
     images:[note1,note2,note3],
     description:"React application using Redux when user can add notes, check them out and edit. Project is Single Page Application.",
-    technology:"React, Redux, Styled Components,",
+    technology:"React, Redux, Styled Components",
     github:""
 },
 {
     id:4, 
-    name:"To Do App",
-    linkName:"todoapp",
-    images:[todoapp],
-    description:"Very simple React To do App, where user can give date untill he want to do some taks and check when it's important and it's will have red color. When user done some task, he will see it in list in bottom.",
-    technology:"React, JavaScript, CSS",
+    name:"Budget App",
+    linkName: "budget",
+    images:[budget1,budget2,budget3,budget4],
+    description:"React application about budget, user can add his budget and categories, add to them transactions. User is able to know how much money he allocated in the month concerned, how much he spent in different categories, and how much money is left.",
+    technology:"React, Redux, Styled Components, React Final Form, i18next, JSON Server",
     github:""
 },
 

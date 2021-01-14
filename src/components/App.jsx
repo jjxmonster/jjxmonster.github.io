@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -60,9 +61,16 @@ const App = () => {
 
 
 
+const RootApp = () => {
+  return (
+    <App />
+  );
+}
+
+export default RootApp
 
 
 
 
-export default App
+
 

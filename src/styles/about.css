@@ -325,6 +325,7 @@ h2 {
 .beforeCss::before {
     cursor: pointer;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -332,7 +333,7 @@ h2 {
     font-size: 3vh;
     max-width: 100%;
     max-height: 100%;
-    content: "CSS";
+    content: "Along with Styled Components";
     transition: .5s ease;
 }
 
