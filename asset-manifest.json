@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.64d80737.chunk.css",
-    "main.js": "/static/js/main.88a4af9f.chunk.js",
-    "main.js.map": "/static/js/main.88a4af9f.chunk.js.map",
+    "main.js": "/static/js/main.9500653d.chunk.js",
+    "main.js.map": "/static/js/main.9500653d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.291a5225.js",
     "runtime-main.js.map": "/static/js/runtime-main.291a5225.js.map",
     "static/js/2.ba43e3d3.chunk.js": "/static/js/2.ba43e3d3.chunk.js",
@@ -19,9 +19,10 @@
     "static/media/note1.da2f5469.jpg": "/static/media/note1.da2f5469.jpg",
     "static/media/note2.394fee4d.jpg": "/static/media/note2.394fee4d.jpg",
     "static/media/note3.0c50f33d.jpg": "/static/media/note3.0c50f33d.jpg",
-    "static/media/redfire.a6b3d53c.jpg": "/static/media/redfire.a6b3d53c.jpg",
-    "static/media/redfire1.fbbced94.jpg": "/static/media/redfire1.fbbced94.jpg",
-    "static/media/redfire2.39e3930d.jpg": "/static/media/redfire2.39e3930d.jpg",
+    "static/media/tissot.c43a0105.png": "/static/media/tissot.c43a0105.png",
+    "static/media/tissot2.0e0fc3ee.png": "/static/media/tissot2.0e0fc3ee.png",
+    "static/media/tissot3.9a09ea4c.png": "/static/media/tissot3.9a09ea4c.png",
+    "static/media/tissot4.c1e337e1.png": "/static/media/tissot4.c1e337e1.png",
     "static/media/weatherapp.d97e18d2.jpg": "/static/media/weatherapp.d97e18d2.jpg",
     "static/media/weatherapp2.3d4fa34f.jpg": "/static/media/weatherapp2.3d4fa34f.jpg",
     "static/media/weatherapp3.ec9b5393.jpg": "/static/media/weatherapp3.ec9b5393.jpg",
@@ -31,6 +32,6 @@
     "static/js/runtime-main.291a5225.js",
     "static/js/2.ba43e3d3.chunk.js",
     "static/css/main.64d80737.chunk.css",
-    "static/js/main.88a4af9f.chunk.js"
+    "static/js/main.9500653d.chunk.js"
   ]
 }
