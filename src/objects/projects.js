@@ -30,10 +30,10 @@ export const projects = [
       name: 'Tissot Store',
       linkName: 'tissot-store',
       images: [tissot1, tissot2, tissot3, tissot4],
-      description:
-         "React shopping cart with Tissot watches, user can browse the store's offer, add product to cart (if he wants, he can remove it). After entering the data in the form, order will be saved in json file",
+      description: `React shopping cart with Tissot watches, user can browse the store's offer, add product to cart (if he wants, he can remove it). After entering the data in the form, order will be saved in json file  due to custom backend with express.js. User can also check all
+         orders`,
       technology:
-         'React, Redux, Styled Components, React Final Form, React-Query, JSON Server',
+         'React, Redux, Styled Components, React Final Form, React-Query, Node.js, Express.js',
       github: '',
    },
    {
